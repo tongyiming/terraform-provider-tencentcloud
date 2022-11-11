@@ -1,8 +1,10 @@
 #!/bin/bash
 
 pr_id=${PR_ID}
-
+cat .changelog/${pr_id}.txt
+cat .changelog/${pr_id}.txt| grep -Poz "(?<=release-note:new-resource\n)\w+"
 new_resources=`cat .changelog/${pr_id}.txt| grep -Poz "(?<=release-note:new-resource\n)\w+" | awk '{print "resource/"$0}'`
+echo $new_resources
 new_data_sources=`cat .changelog/${pr_id}.txt| grep -Poz "(?<=release-note:new-data-source\n)\w+" | awk '{print "datasource/"$0}'`
 source_names=`cat .changelog/${pr_id}.txt| grep -E "^(resource|datasource)\/(\w+)" | awk -F ":" '{print $1}'`
 source_names="$source_names $new_resources $new_data_sources"
