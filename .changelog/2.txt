@@ -1,7 +1,3 @@
 ```release-note:new-resource
 tencentcloud_tcm_mesh
 ```
-
-```release-note:new-resource
-tencentcloud_tcm_cluster_attachment
-```
