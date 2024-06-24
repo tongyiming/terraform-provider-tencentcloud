@@ -10,6 +10,7 @@ var testDataAddressTemplateGroupsNameAll = "data.tencentcloud_address_template_g
 
 func TestAccTencentCloudDataAddressTemplateGroups(t *testing.T) {
 	t.Parallel()
+	// 1
 	resource.Test(t, resource.TestCase{
 		PreCheck:     func() { testAccPreCheck(t) },
 		Providers:    testAccProviders,
