@@ -36,10 +36,10 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v4
+        uses:golangci/golangci-lint-action@v7
         with:
           skip-cache: true
-          version: v1.54
+          version: v2.0
           working-directory: ./tencentcloud
-          args: --new-from-rev=origin/master -v --modules-download-mode=vendor
+          args: -v --modules-download-mode=vendor
           #args: --enable-all --max-same-issues=0 --max-issues-per-linter=0 --new-from-rev=origin/master -v
