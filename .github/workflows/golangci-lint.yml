@@ -42,8 +42,4 @@ jobs:
           version: v1.54
           working-directory: ./tencentcloud
           args: --new-from-rev=origin/master -v --ignore ./vendor
-<<<<<<< HEAD
           #args: --enable-all --max-same-issues=0 --max-issues-per-linter=0 --new-from-rev=origin/master -v
-=======
-          #args: --enable-all --max-same-issues=0 --max-issues-per-linter=0 --new-from-rev=origin/master -v
->>>>>>> faa6e495c (test lint1)
