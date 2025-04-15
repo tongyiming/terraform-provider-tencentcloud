@@ -38,8 +38,7 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v4
         with:
-          skip-cache: true
           version: v1.54
-          working-directory: tencentcloud
+          working-directory: ./tencentcloud
           args: --new-from-rev=origin/master -v
           #args: --enable-all --max-same-issues=0 --max-issues-per-linter=0 --new-from-rev=origin/master -v
